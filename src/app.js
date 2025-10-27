@@ -1,15 +1,11 @@
 const express = require("express");
-// const userRoutes = require("./routes/userRoutes");
+const router = require("./routes/booksRoutes");
 
 const app = express();
 
-// app.use()
-
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    const greetings = "halo jo cow weee";
-    res.send(greetings);
-});
+app.use("/books", router);
+
 
 module.exports = app;
