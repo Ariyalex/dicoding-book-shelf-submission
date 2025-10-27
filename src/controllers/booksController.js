@@ -94,7 +94,7 @@ const updateBookHandler = (req, res) => {
     }
 
     const finished = pageCount === readPage;
-    const updatedBook = updateBook(id, { name, year, author, summary, publisher, pageCount, readPage, readPage, finished });
+    const updatedBook = updateBook(id, { name, year, author, summary, publisher, pageCount, readPage, reading, finished });
     if (updatedBook) {
         res.status(200).json({
             status: "success",
